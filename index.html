@@ -5,25 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iMerciless</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        window.onload = function () {
+            setTimeout(function() {
+                window.scrollTo(-110, -110); // Scroll to the top after a short delay
+            }, 0);
+        }
+    </script>
 </head>
 <body>
+    <div class="loading-bar"></div>
+    <div class="content">
     <header>
-        <h1>iMerciless</h1>
+        <div class="logo">iMerciless</div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://discord.gg/imerciless" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
+                <li><a href="https://www.youtube.com/imerciless" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <h2>Welcome to iMerciless</h2>
-        <p>A YouTube channel and development hub.</p>
+    <section id="home" class="hero">
+        <div class="content">
+            <h1>Welcome to iMerciless</h1>
+            <p>A YouTube channel and development hub.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="content">
+            <h2>About</h2>
+            <p>iMerciless is a passionate YouTuber and developer who loves to share knowledge and create amazing projects.</p>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <div class="content">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus urna a ex vehicula, non convallis mi dictum. Integer vitae ex nisi.</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus urna a ex vehicula, non convallis mi dictum. Integer vitae ex nisi.</p>
+            </div>
+            <!-- Add more project sections as needed -->
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="content">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to iMerciless for collaborations, inquiries, or just to say hi!</p>
+        </div>
     </section>
     <footer>
-        <p>&copy; 2024 iMerciless. All rights reserved.</p>
+        <div class="content">
+            <p>&copy; 2024 iMerciless. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://twitter.com/imerciless" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/imerciless/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://github.com/imerciless" target="_blank"><i class="fab fa-github"></i></a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>
