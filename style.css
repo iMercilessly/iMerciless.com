@@ -200,6 +200,30 @@ footer {
     background-color: #222; /* Darker shade */
     transform: scale(1.1);
 }
+.project-status {
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+.yellow {
+    background-color: yellow;
+    color: black;
+}
 
 /* Animation */
 @keyframes fadeIn {
