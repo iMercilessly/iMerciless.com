@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Check if the requested file is valid
     if (!validFiles.includes(requestedFile)) {
         // Redirect to the 404 page if the file is not valid
-        window.location.href = "404.html";
+        window.location.href = "404";
     }
 });
 
@@ -25,7 +25,7 @@ document.getElementById("login-form").addEventListener("submit", function(event)
     var password = document.getElementById("password").value;
     if(username === "admin" && password === "admin"){
         alert("Login successful!");
-        window.location.replace("unknown.html"); // Redirect to analytics page
+        window.location.replace("unknown"); // Redirect to analytics page
     } else {
         alert("Invalid username or password. Please try again.");
     }
