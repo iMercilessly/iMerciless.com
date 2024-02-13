@@ -246,6 +246,7 @@ nav ul li a .nav-icon {
 
 /* Footer */
 footer {
+    z-index: 1;
     background-color: #111; /* Darker shade of black */
     text-align: center;
     padding: 30px 20px;
@@ -334,6 +335,18 @@ footer {
 .btn-tertiary span {
     position: relative;
     z-index: 1;
+}
+
+.animate {
+    transition: opacity 0.5s, transform 0.5s;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Add animation styles when elements enter the viewport */
+.animated {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Animation */
