@@ -1,0 +1,405 @@
+/* Reset and general styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #030303; /* Darker shade of black */
+    color: #fff; /* White */
+    line-height: 1.6;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #aaa; /* Lighter shade of white */
+    border-radius: 6px;
+}
+
+/* Header */
+header {
+    background-color: #111; /* Darker shade of black */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff; /* White */
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* White */
+    position: relative;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a img {
+    margin-right: 5px;
+    filter: invert(100%);
+    width: 24px;
+    height: 24px;
+}
+
+nav ul li a:hover {
+    color: #ccc; /* Lighter shade of white */
+}
+
+/* Underline animation for header buttons */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #fff; /* White */
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a .nav-icon {
+    margin-right: 5px; /* Adjust the margin between the icon and the text */
+}
+
+.discord-icon {
+    margin-right: 3px; /* Adjust the margin specifically for the Discord icon */
+}
+
+.youtube-icon {
+    margin-right: 3px; /* Adjust the margin specifically for the YouTube icon */
+}
+
+/* Hero section */
+.hero {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 200px 20px;
+    text-align: center;
+    color: #fff; /* White */
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    z-index: 0;
+}
+
+.hero .content {
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* About, Projects, and Contact sections */
+.about,
+.projects,
+.contact,
+.team {
+    padding: 100px 50px; /* Added horizontal padding */
+    background-color: #111; /* Darker shade of black */
+}
+
+.about h2,
+.projects h2,
+.contact h2,
+.team h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about p,
+.projects p,
+.contact p,
+.team p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact {
+    margin-bottom: 100px;
+}
+
+/* Project section */
+.project {
+    margin-bottom: 40px;
+    background-color: #222; /* Darker shade of black */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Slightly more displacement on hover */
+}
+
+.project h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.project-status {
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.project-language {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 14px;
+}
+
+.red {
+    background-color: #880000; /* Darker shade of red */
+    color: white;
+}
+
+.green {
+    background-color: #006400; /* Darker shade of green */
+    color: white;
+}
+
+.yellow {
+    background-color: #806600; /* Darker shade of yellow */
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #111; /* Darker shade of black */
+    text-align: center;
+    padding: 30px 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.social-links li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.social-links a {
+    color: #ccc; /* Lighter shade of white */
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #000000; /* Darker shade of black */
+    color: #fff; /* White */
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: 2px solid #fff; /* White */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #333; /* Darker shade of black on hover */
+    transform: scale(1.1);
+}
+
+/* Improved Button Styles */
+.btn-primary,
+.btn-secondary,
+.btn-tertiary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:before,
+.btn-secondary:before,
+.btn-tertiary:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.6s ease;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+}
+
+.btn-primary:hover:before,
+.btn-secondary:hover:before,
+.btn-tertiary:hover:before {
+    width: 0;
+    height: 0;
+}
+
+.btn-primary span,
+.btn-secondary span,
+.btn-tertiary span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu-toggle {
+    display: none; /* Hide by default */
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Media query for mobile */
+@media only screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show on mobile */
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+    }
+
+    header ul {
+        display: none; /* Hide menu items by default on mobile */
+        flex-direction: column;
+        background-color: #111; /* Darker shade of black for the mobile menu */
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        z-index: 999;
+    }
+
+    header ul.active {
+        display: flex; /* Show menu items when active */
+    }
+
+    header ul li {
+        margin: 10px 0; /* Adjust margin between menu items */
+    }
+
+    header ul li a {
+        color: #fff; /* White */
+    }
+
+    .menu-toggle.active .bar:nth-child(1),
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg);
+        transition: 0.2s;
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+        transform: translateY(3px);
+    }
+}
+
+/* Media query for desktop */
+@media only screen and (min-width: 769px) {
+    header ul {
+        display: flex; /* Show menu items by default on desktop */
+    }
+
+    .menu-toggle {
+        display: none; /* Hide on desktop */
+    }
+}

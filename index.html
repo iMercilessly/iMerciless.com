@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://cdn.discordapp.com/avatars/746808861066788895/3831221cf9eaa01234006a0e1aed9f6c.webp?size=40" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>iMerciless | Official Website</title>
     <meta content="iMerciless | Official Website" property="og:title" />
@@ -21,17 +21,22 @@
     </script>
 </head>
 <body>
-    <div class="loading-bar"></div>
     <header>
         <div class="logo">iMerciless</div>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://discord.gg/vRcmY5JYtR" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
-                <li><a href="https://www.youtube.com/@imerciless" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+                <li><a href="#home"><img src="assets/home_icon.png" alt="Home" class="nav-icon"> Home</a></li>
+                <li><a href="#about"><img src="assets/about_icon.png" alt="About" class="nav-icon"> About</a></li>
+                <li><a href="#projects"><img src="assets/projects_icon.png" alt="Projects" class="nav-icon"> Projects</a></li>
+                <li><a href="#contact"><img src="assets/contact_icon.png" alt="Contact" class="nav-icon"> Contact</a></li>
+                <li><a href="https://discord.gg/vRcmY5JYtR" target="_blank"><img src="assets/discord_icon.png" alt="Discord" class="nav-icon discord-icon"> Discord</a></li>
+                <li><a href="https://www.youtube.com/@imerciless" target="_blank"><img src="assets/youtube_icon.png" alt="YouTube" class="nav-icon youtube-icon"> YouTube</a></li>
+                <li><a href="login.html" class="btn-login"><img src="assets/login_icon.png" alt="Login" class="nav-icon"> Login</a></li>
             </ul>
         </nav>
     </header>
@@ -70,10 +75,11 @@
                 </div>
             </div>
         </section>
-        <section id="contact" class="contact">
+        <section id="contact" class="contact hero">
             <div class="content">
                 <h2>Get in Touch</h2>
                 <p>Have a project in mind or just want to say hello? Feel free to reach out!</p>
+                <a href="https://discord.gg/vRcmY5JYtR" class="btn">Discord</a>
             </div>
         </section>
     </main>
