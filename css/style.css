@@ -130,6 +130,10 @@ nav ul li a .nav-icon {
     animation: fadeIn 1s ease-in-out;
 }
 
+.hero a.btn {
+    text-decoration: none; /* Remove text underline */
+}
+
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
@@ -171,8 +175,8 @@ nav ul li a .nav-icon {
     margin-bottom: 100px;
 }
 
-/* Project section */
 .project {
+    flex: 0 0 calc(50% - 20px); /* Adjust width and margin */
     margin-bottom: 40px;
     background-color: #222; /* Darker shade of black */
     padding: 30px;
@@ -180,6 +184,17 @@ nav ul li a .nav-icon {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
     position: relative;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-container .project {
+    flex: 0 0 calc(50% - 20px); /* Adjust width and margin */
+    margin-bottom: 40px;
 }
 
 .project:hover {
@@ -332,6 +347,9 @@ footer {
         transform: translateY(0);
     }
 }
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
 .menu-toggle {
     display: none; /* Hide by default */
