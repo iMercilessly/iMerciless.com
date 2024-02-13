@@ -26,7 +26,7 @@ body::-webkit-scrollbar-thumb {
 /* Header */
 header {
     background-color: #000;
-    padding: 20px;
+    padding: 30px 20px; /* Increased padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,7 +51,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 20px;
+    margin-right: 30px; /* Adjusted margin */
 }
 
 nav ul li a {
@@ -70,7 +70,7 @@ nav ul li a:hover {
     background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
-    padding: 200px 20px;
+    padding: 250px 20px; /* Increased padding */
     text-align: center;
     color: #fff;
     position: relative;
@@ -104,33 +104,42 @@ nav ul li a:hover {
 }
 
 /* About, Projects, and Contact sections */
+.about,
+.projects,
+.contact,
+.team { /* Added team section */
+    padding: 120px 20px; /* Increased padding */
+}
+
 .about h2,
 .projects h2,
-.contact h2 {
+.contact h2,
+.team h2 { /* Added team section */
     font-size: 48px;
     margin-bottom: 20px;
 }
 
 .about p,
 .projects p,
-.contact p {
+.contact p,
+.team p { /* Added team section */
     font-size: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 40px; /* Adjusted margin */
 }
 
 .contact {
-    padding: 100px 20px; /* Increase padding for better visibility */
     margin-bottom: 200px; /* Adjust margin to push content above the footer */
 }
 
 /* Project section */
 .project {
-    margin-bottom: 40px;
+    margin-bottom: 60px; /* Increased margin */
     background-color: #333; /* Adjusted color */
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
+    position: relative; /* Add relative positioning */
 }
 
 .project:hover {
@@ -139,19 +148,86 @@ nav ul li a:hover {
 
 .project h3 {
     font-size: 32px;
-    margin-bottom: 20px;
-    color: #fff; /* Adjusted color */
+    margin-bottom: 10px; /* Adjusted margin */
+    color: #fff;
 }
 
 .project p {
     font-size: 20px;
+    margin-bottom: 20px; /* Adjusted margin */
+}
+
+.project-status {
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px; /* Adjust top positioning */
+    right: 10px; /* Adjust right positioning */
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+.yellow {
+    background-color: yellow;
+    color: black;
+}
+
+/* Team section */
+.team-members-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-members {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.team-member {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 30px;
+    background: #222;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    scroll-snap-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 /* Footer */
 footer {
     background-color: #000;
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px; /* Increased padding */
     width: 100%;
     position: fixed; /* Change position to fixed */
     bottom: 0; /* Align to the bottom of the viewport */
@@ -165,7 +241,7 @@ footer {
 
 .social-links li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 30px; /* Adjusted margin */
 }
 
 .social-links li:last-child {
@@ -199,30 +275,6 @@ footer {
 .btn:hover {
     background-color: #222; /* Darker shade */
     transform: scale(1.1);
-}
-.project-status {
-    padding: 4px 8px;
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: bold;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.red {
-    background-color: red;
-    color: white;
-}
-
-.green {
-    background-color: green;
-    color: white;
-}
-
-.yellow {
-    background-color: yellow;
-    color: black;
 }
 
 /* Animation */
