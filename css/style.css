@@ -187,13 +187,12 @@ nav ul li a .nav-icon {
 }
 
 .project-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     justify-content: space-between;
 }
 
 .project-container .project {
-    flex: 0 0 calc(50% - 20px); /* Adjust width and margin */
+    grid: 0 0 calc(50% - 20px); /* Adjust width and margin */
     margin-bottom: 40px;
 }
 
