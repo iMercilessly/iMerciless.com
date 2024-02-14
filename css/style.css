@@ -187,7 +187,7 @@ nav ul li a .nav-icon {
 }
 
 .project-container {
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
