@@ -103,3 +103,24 @@ document.addEventListener("DOMContentLoaded", function() {
     // Call the fetchAnalyticsData function to fetch and update the data
     fetchAnalyticsData();
 });
+
+window.addEventListener('scroll', function() {
+    var projectsSection = document.getElementById('projects');
+    var notice = document.getElementById('cheating-notice');
+
+    if (isInViewport(projectsSection)) {
+        notice.style.display = 'block';
+    } else {
+        notice.style.display = 'none';
+    }
+});
+
+function isInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
