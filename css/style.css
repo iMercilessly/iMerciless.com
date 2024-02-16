@@ -151,6 +151,7 @@ nav ul li a .nav-icon {
 .team {
     padding: 100px 20px;
     background-color: #111;
+    justify-content: center;
 }
 
 .about h2,
